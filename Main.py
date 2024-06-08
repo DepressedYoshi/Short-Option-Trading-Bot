@@ -18,7 +18,8 @@ class ShortOptionTradingBot(QCAlgorithm):
         self.indicators = {}
 
     def CoarseSelectionFunction(self, coarse):
-        filtered = [x for x in coarse if x.Price > 15 and x.HasOptions]
+        # filtered = [x for x in coarse if x.Price > 15 and x.HasOptions]
+# todo: need to have better way sof cheing for option
         return [x.Symbol for x in filtered]
     
     def FineSelectionFunction(self, fine):
